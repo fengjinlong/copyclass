@@ -5,12 +5,12 @@ import Layout from '../views/layout/layout'
 const CommonView = () => import('@/components/commonView/commonView.vue')
 const allRouterMap = [
   { path: '/login',
-    component: () => import('@/views/login/index'), 
-    hidden: true 
+    component: () => import('@/views/login/index'),
+    hidden: true
   },
-  { path: '/404', 
-    component: () => import('@/views/404'), 
-    hidden: true 
+  { path: '/404',
+    component: () => import('@/views/404'),
+    hidden: true
   },
   {
     path: '/',
@@ -35,22 +35,22 @@ const allRouterMap = [
     children: [
       {
         path: '/vipc',
-        meta:{title:'IVP',icon: 'cherry'},
+        meta: { title: 'IVP', icon: 'cherry' },
         name: 'vv',
-        component: () => import('@/views/nested/menu1/secondary.vue'), 
+        component: () => import('@/views/nested/menu1/secondary.vue')
       },
       {
         path: '/vipt',
-        meta:{title:'IVPt'},
+        meta: { title: 'IVPt' },
         name: 'vww',
-        component: () => import('@/views/nested/menu1/secondary.vue'), 
+        component: () => import('@/views/nested/menu1/secondary.vue')
       }
     ]
   },
   {
     path: '/11',
     component: Layout,
-    redirect:'',
+    redirect: '',
     name: '111',
     meta: {
       title: '添加',
@@ -61,7 +61,7 @@ const allRouterMap = [
   {
     path: '/1112',
     component: Layout,
-    redirect:'',
+    redirect: '',
     name: '111',
     meta: {
       title: '添加',
@@ -72,7 +72,7 @@ const allRouterMap = [
   {
     path: '/21',
     component: Layout,
-    redirect:'/',
+    redirect: '/',
     name: '111',
     meta: {
       title: '添加',
@@ -83,7 +83,7 @@ const allRouterMap = [
   {
     path: '/32',
     component: Layout,
-    redirect:'',
+    redirect: '',
     name: '111',
     meta: {
       title: '添加',
@@ -94,7 +94,7 @@ const allRouterMap = [
   {
     path: '/34',
     component: Layout,
-    redirect:'',
+    redirect: '',
     name: '111',
     meta: {
       title: '添加',
@@ -105,7 +105,7 @@ const allRouterMap = [
   {
     path: '/45',
     component: Layout,
-    redirect:'',
+    redirect: '',
     name: '111',
     meta: {
       title: '添加',
@@ -116,7 +116,7 @@ const allRouterMap = [
   {
     path: '/56',
     component: Layout,
-    redirect:'',
+    redirect: '',
     name: '111',
     meta: {
       title: '添加',
@@ -127,7 +127,7 @@ const allRouterMap = [
   {
     path: '/12',
     component: Layout,
-    redirect:'',
+    redirect: '',
     name: '111',
     meta: {
       title: '添加',
@@ -138,7 +138,7 @@ const allRouterMap = [
   {
     path: '/22',
     component: Layout,
-    redirect:'',
+    redirect: '',
     name: '111',
     meta: {
       title: '添加',
@@ -167,16 +167,16 @@ const allRouterMap = [
           {
             path: '/nested/mm111111',
             name: 'mmmm00',
-            component: () => import('@/views/nested/menu1/first.vue'), 
+            component: () => import('@/views/nested/menu1/first.vue'),
             hidden: true,
-            meta: { title: '666666' },
+            meta: { title: '666666' }
           },
           {
             path: '/nested/mm',
             name: 'mmmm00',
-            component: () => import('@/views/nested/menu1/secondary.vue'), 
+            component: () => import('@/views/nested/menu1/secondary.vue'),
             hidden: true,
-            meta: { title: '66666----2222' },
+            meta: { title: '66666----2222' }
           }
         ]
       },
@@ -190,15 +190,15 @@ const allRouterMap = [
           {
             path: '/sec222',
             name: 'mp',
-            component: () => import('@/views/nested/menu2/index.vue'), 
+            component: () => import('@/views/nested/menu2/index.vue'),
             hidden: true,
-            meta: { title: '66666----33' },
+            meta: { title: '66666----33' }
           },
           {
             path: '/three333',
             hidden: true,
-            meta:{title:'3333'},
-            component: () => import('@/views/nested/menu1/secondary.vue'), 
+            meta: { title: '3333' },
+            component: () => import('@/views/nested/menu1/secondary.vue')
           }
         ]
       }
@@ -209,5 +209,5 @@ const allRouterMap = [
 ]
 
 export const routers = [
-	...allRouterMap
-];
+  ...allRouterMap
+]

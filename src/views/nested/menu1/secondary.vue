@@ -12,19 +12,18 @@ export default {
   created () {
 
   },
-  data () { 
+  data () {
     return {
-
     }
   },
   methods: {
-    back(){
+    back () {
       this.$router.back()
     }
   }
- }
+}
+
 </script>
 
 <style lang='stylus' rel='stylesheet/stylus' scoped>
-
 </style>

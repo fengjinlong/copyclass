@@ -20,21 +20,18 @@ import SidebarItem from './sidebarItem'
 
 export default {
   components: { SidebarItem },
-  created (){
+  created () {
   },
   computed: {
     ...mapGetters([
       'sidebar'
     ]),
-    routes() {
+    routes () {
       // 根据返回的权限路由与所有路由对比，生成左侧菜单路由
-
-
-
       // 当前是返回所有不带hidden为true的路由作为菜单路由
       return this.$router.options.routes
     },
-    isCollapse() {
+    isCollapse () {
       return !this.sidebar.opened
     }
   }

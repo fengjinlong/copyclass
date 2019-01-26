@@ -45,7 +45,8 @@ module.exports = {
   },
   outputDir: 'dist',
   // eslint
-  lintOnSave: environment !== 'production',
+  //   lintOnSave: environment !== 'production',
+  lintOnSave: false,
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))

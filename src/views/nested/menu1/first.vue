@@ -5,13 +5,14 @@
 </template>
 
 <script>
-  export default {
-    methods: {
-      click () {
-        this.$router.push('/nested/mm')
-      }
+export default {
+  methods: {
+    click () {
+      this.$router.push('/nested/mm')
     }
   }
+}
+
 </script>
 
 <style lang='stylus' rel='stylesheet/stylus' scoped>

@@ -12,10 +12,10 @@ import { getValiCode } from '@/api/table.js'
 export default {
   data () {
     return {
-      
     }
   },
-  created() {
+  created () {
+    console.log('home')
     getValiCode().then(res => {
     })
   },

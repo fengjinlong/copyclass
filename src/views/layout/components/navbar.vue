@@ -41,10 +41,10 @@ export default {
     console.log(process.env.BASE_API)
   },
   methods: {
-    toggleSideBar() {
+    toggleSideBar () {
       this.$store.dispatch('ToggleSideBar')
     },
-    logout() {
+    logout () {
       this.$router.push('/login')
       // this.$store.dispatch('LogOut').then(() => {
       //   location.reload() // 为了重新实例化vue-router对象 避免bug
@@ -96,4 +96,3 @@ export default {
   }
 }
 </style>
-
