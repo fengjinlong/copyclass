@@ -1,9 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router/index'
-import store from './store'
-
-Vue.config.productionTip = false
+import store from './store/index'
 
 import 'normalize.css/normalize.css' // A modern alternative to CSS resets
 import ElementUI from 'element-ui'
@@ -14,6 +12,8 @@ import '@/styles/index.scss'
 
 import '@/icons'
 import '@/permission'
+
+Vue.config.productionTip = false
 
 Vue.use(ElementUI)
 

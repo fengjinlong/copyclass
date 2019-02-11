@@ -7,17 +7,15 @@
 
 <script>
 import { mapGetters } from 'vuex'
-// import { getValiCode } from '@/api/table.js'
+import { getValiCode } from '@/api/table.js'
 
 export default {
   data () {
-    return {
-      
-    }
+    return {}
   },
-  created() {
-    // getValiCode().then(res => {
-    // })
+  created () {
+    getValiCode().then(res => {
+    })
   },
   name: 'Dashboard',
   computed: {

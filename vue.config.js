@@ -13,10 +13,17 @@ module.exports = {
   },
   outputDir: 'dist',
   // eslint
-  lintOnSave: environment !== 'production',
+  lintOnSave: false,
+  // lintOnSave: environment !== 'production',
   chainWebpack: config => {
     config.resolve.alias
       .set('@', resolve('src'))
       .set('utils', resolve('src/views'))
+    const svgRule = config.module.rule('svg')
+    svgRule.uses.clear()
+    svgRule
+      .use('svg-sprite-loader')
+      .loader('svg-sprite-loader')
+      .options({ symbolId: 'icon-[name]' })
   }
 }
