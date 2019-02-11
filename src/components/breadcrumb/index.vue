@@ -2,12 +2,9 @@
   <el-breadcrumb class="app-breadcrumb" separator="/">
     <transition-group name="breadcrumb">
       <!-- <el-breadcrumb-item v-for="(item,index) in levelList" v-if="item.meta.title&&item.meta.breadcrumb!==false" :key="item.path"> -->
-      <el-breadcrumb-item v-for="(item,index) in levelList" :key="item.path">
-        <!-- <div v-if="item.meta.title&&item.meta.breadcrumb!==false"> -->
+      <el-breadcrumb-item v-for="(item,index) in levelList" :key="item.path" v-if="item.meta.title&&item.meta.breadcrumb!==false">
           <span v-if="item.redirect==='noredirect'||index==levelList.length-1" class="no-redirect">{{ item.meta.title }}</span>
           <a v-else @click.prevent="handleLink(item)">{{ item.meta.title }}</a>
-        <!-- </div> -->
-        
       </el-breadcrumb-item>
     </transition-group>
   </el-breadcrumb>
@@ -41,9 +38,9 @@ export default {
       if (first && first.name !== 'dashboard') {
         matched = [
           {
-            path: '/dashboard',
+            path: '/',
             meta: {
-              title: 'Dashboard'
+              title: '首页'
             }
           }
         ].concat(matched)
@@ -51,7 +48,6 @@ export default {
       this.levelList = matched
     },
     pathCompile (path) {
-      // To solve this problem https://github.com/PanJiaChen/vue-element-admin/issues/561
       const { params } = this.$route
       var toPath = pathToRegexp.compile(path)
       return toPath(params)

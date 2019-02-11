@@ -37,11 +37,11 @@
 </template>
 
 <script>
-import { isvalidUsername } from '@/utils/validate'
+// import { isvalidUsername } from '@/utils/validate'
 
 export default {
   name: 'login',
-  data() {
+  data () {
     const validateUsername = (rule, value, callback) => {
       // if (!isvalidUsername(value)) {
       //   callback(new Error('请输入正确的用户名'))
@@ -73,25 +73,25 @@ export default {
   },
   watch: {
     $route: {
-      handler: function(route) {
+      handler: function (route) {
         this.redirect = route.query && route.query.redirect
       },
       immediate: true
     }
   },
   methods: {
-    showPwd() {
+    showPwd () {
       if (this.pwdType === 'password') {
         this.pwdType = ''
       } else {
         this.pwdType = 'password'
       }
     },
-    handleLogin() {
+    handleLogin () {
       this.$refs.loginForm.validate(valid => {
         this.loading = true
         if (valid) {
-        this.loading = false
+          this.loading = false
           // this.$store.dispatch('Login', this.loginForm).then(() => {
           //   this.loading = false
           //   // this.$router.push({ path: this.redirect || '/' })

@@ -24,6 +24,34 @@ const allRouterMap = [
     }]
   },
   {
+    path: '/vip',
+    component: Layout,
+    redirect: '/vip-c',
+    name: 'vip',
+    meta: {
+      title: 'vip',
+			icon: 'apple'
+		},
+		children: [
+			{
+				path: '/vip-c',
+				component: CommonView,
+				name: 'vip-child',
+				component: () => import('@/views/nested/menu1/first.vue'),
+				hidden: true,
+				meta: { title: 'vip-child-title' }
+			},
+			{
+				path: '/vip-cc',
+				component: CommonView,
+				name: 'vip-child2',
+				component: () => import('@/views/nested/menu1/first.vue'),
+				hidden: true,
+				meta: { title: 'vip-child-title2' }
+			}
+		]
+  },
+  {
     path: '/nested',
     component: Layout,
     redirect: '/menu1',

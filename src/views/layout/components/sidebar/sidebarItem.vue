@@ -15,7 +15,7 @@
       </template>
 
       <!-- <template v-if="!child.hidden" v-for="child in item.children"> -->
-      <template v-for="child in item.children">
+      <template v-for="child in item.children" v-if="!child.hidden">
         <sidebar-item
           v-if="child.children&&child.children.length>0"
           :is-nest="true"
