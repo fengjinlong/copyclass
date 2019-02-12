@@ -2,7 +2,6 @@ import axios from 'axios'
 import qs from 'qs'
 import baseUrl from './baseUrl'
 let CancelToken = axios.CancelToken // 取消请求
-// let baseUrl = 'http://210.12.23.78:8082'
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8'
 axios.defaults.baseURL = baseUrl
 

@@ -1,13 +1,13 @@
 let baseUrl
 switch (process.env.NODE_ENV) {
   case 'development':
-    baseUrl = 'http://210.12.23.78:8082'
+    baseUrl = 'http://10.1.1.16:9001'
     break
   case 'test':
-    baseUrl = 'test'
+    baseUrl = 'http://10.1.1.16:9001'
     break
   case 'production':
-    baseUrl = '222222222' // 生产环境url
+    baseUrl = 'production' // 生产环境url
     break
 }
 
