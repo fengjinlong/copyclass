@@ -5,7 +5,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "test": "vue-cli-service build --mode test"
   },
   "dependencies": {
     "axios": "0.18.0",

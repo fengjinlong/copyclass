@@ -22,11 +22,25 @@ const allRouterMap = [
       path: '/home',
       component: () => import('@/views/home/home')
     }]
-  },
+	},
+	{
+		path: '/homePage',
+    component: Layout,
+    redirect: '/homePage1',
+    name: 'homePage',
+		children: [
+			{
+				path: '/homePage1',
+				component: CommonView,
+				component: () => import('@/views/nested/menu1/first.vue'),
+				meta: { title: '首页2',icon: 'banana' }
+			},
+		]
+	},
   {
     path: '/vip',
     component: Layout,
-    redirect: '/vip-c',
+    redirect: '/vipc',
     name: 'vip',
     meta: {
       title: 'vip',
@@ -34,20 +48,18 @@ const allRouterMap = [
 		},
 		children: [
 			{
-				path: '/vip-c',
+				path: '/vipc',
 				component: CommonView,
 				name: 'vip-child',
 				component: () => import('@/views/nested/menu1/first.vue'),
-				hidden: true,
-				meta: { title: 'vip-child-title' }
+				meta: { title: 'viptitle' }
 			},
 			{
 				path: '/vip-cc',
 				component: CommonView,
 				name: 'vip-child2',
 				component: () => import('@/views/nested/menu1/first.vue'),
-				hidden: true,
-				meta: { title: 'vip-child-title2' }
+				meta: { title: 'viptitle2' }
 			}
 		]
   },

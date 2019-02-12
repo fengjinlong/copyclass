@@ -21,7 +21,6 @@ const RouterConfig = {
 export const router = new VueRouter(RouterConfig);
 
 router.beforeEach((to, from, next) => {
-  console.log(to)
 	next()
 });
 
